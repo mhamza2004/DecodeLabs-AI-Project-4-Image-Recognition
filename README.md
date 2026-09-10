@@ -1,29 +1,24 @@
 # AI Project 4 - Image Recognition
 
-A basic image recognition project built with Python that demonstrates two common computer vision tasks:
+A basic image recognition project built with Python. This project demonstrates two common computer vision tasks:
 
-- Optical Character Recognition (OCR)
-- Object Detection using a pre-trained MobileNet-SSD model
+1. Text Recognition using Tesseract OCR
+2. Object Detection using MobileNet-SSD
 
-The project processes image data and extracts readable text or identifies objects with confidence scores.
+The project follows a simple recognition pipeline where an input image is processed, analyzed, and converted into useful machine-readable output.
 
 ---
 
 ## Project Overview
 
-Images contain unstructured information that cannot be directly processed like normal structured data.
+The goal of this project is to demonstrate how a machine can process visual data and recognize text and objects from images.
 
-This project uses computer vision techniques and pre-trained recognition tools to process images and convert visual information into useful machine-readable results.
+The project contains two recognition approaches:
 
-The project contains two separate recognition pipelines:
+- OCR for extracting text from an image
+- Object Detection for identifying objects and drawing bounding boxes around them
 
-### 1. OCR Pipeline
-
-Uses Tesseract OCR to detect and extract text from an image.
-
-### 2. Object Detection Pipeline
-
-Uses OpenCV DNN and a pre-trained MobileNet-SSD model to detect objects and draw bounding boxes around them.
+An 80% confidence threshold is used for validation in the recognition pipeline.
 
 ---
 
@@ -33,9 +28,9 @@ Uses OpenCV DNN and a pre-trained MobileNet-SSD model to detect objects and draw
 - OpenCV
 - Tesseract OCR
 - Pytesseract
-- Pillow
 - MobileNet-SSD
-- Caffe Model
+- Caffe pre-trained model
+- Pillow
 
 ---
 
@@ -46,12 +41,12 @@ AI_Project_4/
 |
 |-- models/
 |   |-- deploy.prototxt
-|   `-- mobilenet_iter_73000.caffemodel
+|   |-- mobilenet_iter_73000.caffemodel
 |
 |-- Screenshots/
 |   |-- output1.png
 |   |-- output2.png
-|   `-- output3.png
+|   |-- output3.png
 |
 |-- input.jpg
 |-- objects.jpg
@@ -60,5 +55,5 @@ AI_Project_4/
 |-- recognition.py
 |-- object_detection.py
 |-- requirements.txt
-`-- README.md
+|-- README.md
 ```
