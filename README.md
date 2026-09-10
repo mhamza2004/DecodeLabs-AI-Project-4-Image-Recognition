@@ -133,11 +133,14 @@ AI_Project_4/
 |-- object_detection.py
 |-- requirements.txt
 |-- README.md
+```
 
 ## Author
 
 **Muhammad Hamza**
+
 Software Engineering Student
+
 Iqra University
 
 GitHub: https://github.com/mhamza2004
@@ -155,4 +158,3 @@ GitHub: https://github.com/mhamza2004
 ### Object Detection Result
 
 ![Object Detection Result](Screenshots/output3.png)
-```
