@@ -1,160 +1,167 @@
-# DecodeLabs AI Project 4 - Image Recognition
+<div align="center">
 
-## Project Overview
+# 🖼️ DecodeLabs AI Project 4 — Image Recognition
 
-This project was developed as part of the DecodeLabs Artificial Intelligence Industrial Training Program.
+### Text Recognition (OCR) & Object Detection using OpenCV, Tesseract & MobileNet-SSD
 
-The project is a basic image recognition system that demonstrates two common computer vision tasks: text recognition using Tesseract OCR and object detection using a pre-trained MobileNet-SSD model.
+![Python](https://img.shields.io/badge/Python-3-blue?logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-DNN%20%26%20Vision-5C3EE8?logo=opencv&logoColor=white)
+![Tesseract](https://img.shields.io/badge/Tesseract-OCR-yellowgreen)
+![MobileNet--SSD](https://img.shields.io/badge/Model-MobileNet--SSD-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+_Developed as part of the DecodeLabs Artificial Intelligence Industrial Training Program_
+
+</div>
+
+---
+
+## 📌 Project Overview
+
+This project is a **basic image recognition system** that demonstrates two common computer vision tasks:
+
+- 🔤 **Text Recognition** using Tesseract OCR
+- 🎯 **Object Detection** using a pre-trained MobileNet-SSD model
 
 The system processes sample images, recognizes text or objects, calculates confidence scores, and displays the results clearly.
 
-## Features
+---
 
-- Processes input images using OpenCV
-- Performs image preprocessing for OCR
-- Converts images to grayscale
-- Applies Gaussian blur
-- Uses Otsu thresholding
-- Uses Adaptive thresholding
-- Extracts text using Tesseract OCR
-- Calculates OCR confidence scores
-- Performs object detection using MobileNet-SSD
-- Uses an 80% confidence threshold
-- Draws bounding boxes around detected objects
-- Displays object labels and confidence scores
-- Saves processed output images
+## ✨ Features
 
-## Part 1 - Text Recognition (OCR)
+| Category                | Capabilities                                                                  |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| 🖼️ **Image Processing** | Processes input images using OpenCV                                           |
+| 🧪 **Preprocessing**    | Grayscale conversion, Gaussian blur, Otsu thresholding, Adaptive thresholding |
+| 🔤 **OCR**              | Extracts text using Tesseract OCR, calculates OCR confidence scores           |
+| 🎯 **Object Detection** | Detects objects using MobileNet-SSD with an **80% confidence threshold**      |
+| 📦 **Visualization**    | Draws bounding boxes, displays labels & confidence scores                     |
+| 💾 **Output**           | Saves processed output images                                                 |
 
-The OCR part of the project uses Tesseract OCR through the Pytesseract library.
+---
 
-The input image is an invoice containing information such as company details, invoice number, customer information, products, prices, and total amount.
+## 🔤 Part 1 — Text Recognition (OCR)
 
-The image is resized and processed using different preprocessing techniques before being passed to Tesseract OCR.
+The OCR component uses **Tesseract OCR** through the **Pytesseract** library.
 
-The preprocessing methods tested include:
+The input image is an **invoice** containing information such as company details, invoice number, customer information, products, prices, and total amount.
 
-- Grayscale Conversion
-- Gaussian Blur
-- Otsu Thresholding
-- Adaptive Thresholding
+The image is resized and processed using different preprocessing techniques before being passed to Tesseract OCR. The preprocessing methods tested include:
 
-The system compares the confidence scores from the different preprocessing methods and selects the method with the highest confidence.
+- 🔲 Grayscale Conversion
+- 🌫️ Gaussian Blur
+- ⚫ Otsu Thresholding
+- 🔳 Adaptive Thresholding
 
-## OCR Result
+The system compares the confidence scores from the different preprocessing methods and **automatically selects the method with the highest confidence**.
 
-The best preprocessing method was:
+### 📊 OCR Result
 
-**Grayscale**
+| Metric                           | Value         |
+| -------------------------------- | ------------- |
+| 🏆 Best Preprocessing Method     | **Grayscale** |
+| 📈 Average OCR Confidence        | **92.61%**    |
+| 🎯 Required Confidence Threshold | 80%           |
+| ✅ Validation Result             | **PASSED**    |
 
-Average OCR confidence:
+> The system successfully recognized the main text from the invoice image.
 
-**92.61%**
+---
 
-Required confidence threshold:
+## 🎯 Part 2 — Object Detection
 
-**80%**
+The object detection component uses a **pre-trained MobileNet-SSD model** with OpenCV's **DNN module**.
 
-Validation result:
+The model processes an input image and identifies objects along with their confidence scores. Only detections with a confidence score of **80% or higher** are accepted, and detected objects are displayed using bounding boxes and labels.
 
-**PASSED**
+### 📊 Object Detection Result
 
-The system successfully recognized the main text from the invoice image.
+| #   | Object    | Confidence | Status    |
+| --- | --------- | ---------- | --------- |
+| 1   | 🧍 Person | 99.99%     | ✅ Passed |
+| 2   | 🚗 Car    | 99.99%     | ✅ Passed |
 
-## Part 2 - Object Detection
+**Total detected objects: 2**
 
-The object detection part uses a pre-trained MobileNet-SSD model with OpenCV's DNN module.
+> Both detections passed the required 80% confidence threshold.
 
-The model processes an input image and identifies objects along with their confidence scores.
+---
 
-Only detections with a confidence score of 80% or higher are accepted.
+## 🧠 Concepts Used
 
-The detected objects are displayed using bounding boxes and labels.
+`Image Recognition` · `Optical Character Recognition` · `Image Preprocessing` · `Grayscale Conversion` · `Gaussian Blur` · `Otsu Thresholding` · `Adaptive Thresholding` · `OCR Confidence Scoring` · `Object Detection` · `Bounding Boxes` · `Confidence Thresholding` · `Pre-trained Models` · `MobileNet-SSD` · `OpenCV DNN`
 
-## Object Detection Result
+---
 
-The final test successfully detected:
+## 🛠️ Technologies Used
 
-1. Person - 99.99% confidence
-2. Car - 99.99% confidence
+<div align="center">
 
-Total detected objects:
+![Python](https://img.shields.io/badge/-Python%203-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![Pytesseract](https://img.shields.io/badge/-Pytesseract-yellowgreen?style=for-the-badge)
+![Tesseract OCR](https://img.shields.io/badge/-Tesseract%20OCR-43853D?style=for-the-badge)
+![MobileNet-SSD](https://img.shields.io/badge/-MobileNet--SSD-orange?style=for-the-badge)
+![Pillow](https://img.shields.io/badge/-Pillow-blueviolet?style=for-the-badge)
+![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-**2**
+</div>
 
-Both detections passed the required 80% confidence threshold.
+---
 
-## Concepts Used
-
-- Image Recognition
-- Optical Character Recognition
-- Image Preprocessing
-- Grayscale Conversion
-- Gaussian Blur
-- Otsu Thresholding
-- Adaptive Thresholding
-- OCR Confidence Scoring
-- Object Detection
-- Bounding Boxes
-- Confidence Thresholding
-- Pre-trained Models
-- MobileNet-SSD
-- OpenCV DNN
-
-## Technologies Used
-
-- Python 3
-- OpenCV
-- Pytesseract
-- Tesseract OCR
-- MobileNet-SSD
-- Pillow
-- Visual Studio Code
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 AI_Project_4/
-|
-|-- models/
-|   |-- deploy.prototxt
-|   |-- mobilenet_iter_73000.caffemodel
-|
-|-- Screenshots/
-|   |-- output1.png
-|   |-- output2.png
-|   |-- output3.png
-|
-|-- input.jpg
-|-- objects.jpg
-|-- output.jpg
-|-- detection_output.jpg
-|-- recognition.py
-|-- object_detection.py
-|-- requirements.txt
-|-- README.md
+│
+├── models/
+│   ├── deploy.prototxt
+│   └── mobilenet_iter_73000.caffemodel
+│
+├── Screenshots/
+│   ├── output1.png
+│   ├── output2.png
+│   └── output3.png
+│
+├── input.jpg
+├── objects.jpg
+├── output.jpg
+├── detection_output.jpg
+├── recognition.py
+├── object_detection.py
+├── requirements.txt
+└── README.md
 ```
 
-## Author
+---
+
+## 👤 Author
 
 **Muhammad Hamza**
+Software Engineering Student · Iqra University
 
-Software Engineering Student
+[![GitHub](https://img.shields.io/badge/GitHub-mhamza2004-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mhamza2004)
 
-Iqra University
+---
 
-GitHub: https://github.com/mhamza2004
+## 🖼️ Output Screenshots
 
-## Output Screenshots
-
-### OCR Result
+### 🔤 OCR Result
 
 ![OCR Result](Screenshots/output1.png)
 
-### Object Detection Terminal Output
+### 🎯 Object Detection Terminal Output
 
 ![Object Detection Terminal Output](Screenshots/output2.png)
 
-### Object Detection Result
+### 📦 Object Detection Result
 
 ![Object Detection Result](Screenshots/output3.png)
+
+---
+
+<div align="center">
+
+⭐ _Part of the DecodeLabs AI Industrial Training Program_ ⭐
+
+</div>
